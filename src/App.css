@@ -54,7 +54,11 @@ ul {
   text-align: left;
 }
 
-.avatar { margin: 5px; border-radius: 50%; min-height: 70px; }
+.avatar {
+  margin: 5px;
+  border-radius: 50%;
+}
+
 .profile {
   border: 1px solid #aaa;
   border-radius: 6px;

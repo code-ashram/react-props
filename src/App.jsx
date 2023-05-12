@@ -1,18 +1,24 @@
 import './App.css'
-import profiles from './profiles.js'
-import Profile from './Profile.jsx'
+import { getImageUrl } from './utils.js';
 
-export default function Gallery() {
+const Avatar = ({ person, size }) => (
+  <img
+    className="avatar"
+    src={getImageUrl(person, size < 90 ? 's' :'b')}
+    alt={person.name}
+    width={size}
+    height={size}
+  />
+)
 
-  return (
-    <div>
-      <h1>Notable Scientists</h1>
+const Profile = () => (
+  <Avatar
+    size={40}
+    person={{
+      name: 'Gregorio Y. Zara',
+      imageId: '7vQD0fP'
+    }}
+  />
+)
 
-      {profiles?.map((profile, index) => (
-        <Profile key={index} person={profile} />
-      ))}
-
-    </div>
-  );
-}
-
+export default Profile
